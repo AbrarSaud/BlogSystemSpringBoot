@@ -78,14 +78,25 @@ public class PostController {
     }
 
     //    Endpoint # 6
-    @GetMapping("/data-between/{startPublishDate}/{endPublishDate}")
-    public ResponseEntity<?> getPostsPublishDateBetween(@PathVariable String startPublishDate, @PathVariable String endPublishDate) {
-        return ResponseEntity.ok(postService.getPostsPublishDateBetween(startPublishDate, endPublishDate));
+    @GetMapping("/data-between/{start}/{end}")
+    public ResponseEntity<?> getPostsPublishDateBetween(@PathVariable String start, @PathVariable String end) {
+        return ResponseEntity.ok(postService.getPostsPublishDateBetween(start, end));
     }
     //    Endpoint # 7
     @GetMapping("/get-by-keyword/{keyword}")
     public List<Post> getPostsByContentKeyword(@PathVariable  String keyword) {
         return postService.getPostsByKeyWord(keyword);
     }
+
+    // (Endpoint #8)
+    @GetMapping("/get-by-category-name/{categoryName}")
+    public ResponseEntity<?> getPostsByCategoryName(@PathVariable String categoryName) {
+        List<Post> posts = postService.getPostsByCategoryName(categoryName);
+        if (posts.isEmpty()) {
+            return ResponseEntity.status(404).body(new ApiResponse("Not found posts for this category"));
+        }
+        return ResponseEntity.ok(posts);
+    }
+
 
 }

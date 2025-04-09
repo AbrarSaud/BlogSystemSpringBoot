@@ -87,6 +87,10 @@ public class PostService {
     public List<Post> getPostsByKeyWord(String keyword) {
         return postRepository.findPostsByWord(keyword);
     }
+    // (Endpoint #8)
+    public List<Post> getPostsByCategoryName(String categoryName) {
+        return postRepository.findPostsByCategoryName(categoryName);
+    }
 
 
 }

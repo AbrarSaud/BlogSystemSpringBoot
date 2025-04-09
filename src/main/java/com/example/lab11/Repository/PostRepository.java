@@ -31,5 +31,8 @@ public interface PostRepository extends JpaRepository<Post, Integer> {
     @Query("select p from Post p where p.content like %?1%")
     List<Post> findPostsByWord(String keyWord);
 
+    // Endpoint #8
+    @Query("SELECT p FROM Post p WHERE p.categoryId IN (SELECT c.id FROM Category c WHERE c.name = ?1)")
+    List<Post> findPostsByCategoryName(String categoryName);
 
 }
