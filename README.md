@@ -17,12 +17,12 @@
   - `POST    /api/v1/blog/category/add `             - Create new Category  
   - `PUT     /api/v1/blog/category/update/{category_id}`             - Update Category by ID  
   - `DELETE  /api/v1/blog/category/delete/{category_id}`             - Delete Category by ID
-- **Post:**
+- **Comments:**
    
-  - `GET     /api/v1/blog/posts/get `             -Get all posts  
-  - `POST    /api/v1/blog/posts/add `             - Create new post  
-  - `PUT     /api/v1/blog/posts/update/{post_id}`             - Update post by ID  
-  - `DELETE  /api/v1/blog/posts/delete/{post_id}`             - Delete post by ID
+  - `GET     /api/v1/blog/comments/get `             -Get all comments  
+  - `POST    /api/v1/blog/comments/add `             - Create new comments  
+  - `PUT     /api/v1/blog/comments/update/{comments_id}`             - Update comments by ID  
+  - `DELETE  /api/v1/blog/comments/delete/{comments_id}`             - Delete comments by ID
 
  ### 8 Endpoints use JPA and JPQL 
 
