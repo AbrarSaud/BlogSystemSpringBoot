@@ -4,8 +4,8 @@
 - **User:**
   - `GET     /api/v1/blog/users/get `                - Get all users
   - `POST    /api/v1/blog/users/add   `              - Add a new user  
-  - `PUT     /api/v1/blog/users/users/{user_id}  `       - Update a user by ID  
-  - `DELETE  /api/v1/blog/users/users/{user_id}   `      - Delete a user by ID
+  - `PUT     /api/v1/blog/users/update/{user_id}  `       - Update a user by ID  
+  - `DELETE  /api/v1/blog/users/delete/{user_id}   `      - Delete a user by ID
 - **Post:**    
   - `GET     /api/v1/blog/posts/get `             -Get all posts  
   - `POST    /api/v1/blog/posts/add `             - Create new post  
